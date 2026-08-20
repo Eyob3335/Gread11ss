@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#0F5C3F">
+<title>Habesha Learn — Grade 11</title>
+<meta name="description" content="Offline, gamified Grade 11 study app for Economics, IT, Geography and History.">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ======================= TOP STAT BAR ======================= -->
+<header id="topbar" class="topbar hidden">
+  <button id="btnBack" class="icon-btn back-btn hidden" aria-label="Back">
+    <svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="stat stat-streak" title="Day streak">
+    <span class="flame">🔥</span><span id="statStreak">0</span>
+  </div>
+  <div class="stat stat-gems" title="Gems">
+    <span class="gem">💎</span><span id="statGems">0</span>
+  </div>
+  <div class="stat stat-hearts" title="Hearts">
+    <span class="heart">❤️</span><span id="statHearts">5</span>
+  </div>
+  <div class="stat stat-xp" title="Total XP">
+    <span class="xpstar">⭐</span><span id="statXp">0</span>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<!-- ======================= BOTTOM NAV ======================= -->
+<nav id="bottomnav" class="bottomnav hidden">
+  <button class="navbtn active" data-tab="home">
+    <svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9a1 1 0 01-1 1h-4v-6H9v6H5a1 1 0 01-1-1v-9z" fill="currentColor"/></svg>
+    <span>Learn</span>
+  </button>
+  <button class="navbtn" data-tab="quests">
+    <svg viewBox="0 0 24 24"><path d="M12 2l2.4 6.8L21 9.3l-5.4 4.6L17.4 21 12 17.3 6.6 21l1.8-7.1L3 9.3l6.6-.5z" fill="currentColor"/></svg>
+    <span>Quests</span>
+  </button>
+  <button class="navbtn" data-tab="profile">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="currentColor"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" fill="currentColor"/></svg>
+    <span>Profile</span>
+  </button>
+</nav>
+
+<!-- confetti / particle layer -->
+<div id="fxLayer" aria-hidden="true"></div>
+
+<script src="content.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
